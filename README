@@ -1,0 +1,8 @@
+How to run : 
+
+- create a new conda environment : conda create -n sbi_try python=3.10 && conda activate sbi_try
+- git clone in this environment : git@github.com:etouron1/SBI_develop.git
+- install sbibm outside SBI_develop : pip install -e sbibm
+- install zuko : pip install zuko
+- run python snpe_d_launch.py
+
