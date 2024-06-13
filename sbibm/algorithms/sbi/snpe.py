@@ -118,7 +118,7 @@ def run(
     posteriors = []
     proposal = prior
     
-    with open(f"snpe_{variant}_accuracy_{num_observation}_obs_{neural_net}.csv", "w") as f:
+    with open(f"snpe_{variant}_accuracy_{num_observation}_obs_{neural_net}_{task.name}.csv", "w") as f:
             writer = csv.writer(f)
             writer.writerow(["round", "c2st", "mmd"])
 
@@ -155,7 +155,7 @@ def run(
         accuracy_c2st = c2st(reference_samples, posterior_samples).item()
         accuracy_mmd = mmd(reference_samples, posterior_samples).item()
         
-        with open(f"snpe_{variant}_accuracy_{num_observation}_obs_{neural_net}.csv",  "a") as f:
+        with open(f"snpe_{variant}_accuracy_{num_observation}_obs_{neural_net}_{task.name}.csv",  "a") as f:
             writer = csv.writer(f)
             writer.writerow([r+1, accuracy_c2st, accuracy_mmd])
 
