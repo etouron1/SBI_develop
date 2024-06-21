@@ -32,7 +32,7 @@ def get_task(task_name: str, *args: Any, **kwargs: Any) -> Task:
         from sbibm.tasks.gaussian_linear.task import GaussianLinear
 
         return GaussianLinear(*args, **kwargs)
-    
+    #add task gaussian linear 2D
     elif task_name == "gaussian_linear_2d":
         from sbibm.tasks.gaussian_linear_2d.task import GaussianLinear2D
 
