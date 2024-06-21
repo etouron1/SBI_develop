@@ -99,6 +99,7 @@ class SNPE_D(PosteriorEstimator):
             def log_q(theta_batch):
                 log_q = self._neural_net.log_prob(theta_batch, x)
                 if self._round > 0:
+                    #mixture of proposals
                     last_proposal = torch.zeros((len(self._previous_density_estimator), theta_batch.size(0)), device = theta_batch.device)
                     last_proposal[0] = self._previous_density_estimator[0].log_prob(theta_batch)
                     for i in range(1, len(self._previous_density_estimator)):
