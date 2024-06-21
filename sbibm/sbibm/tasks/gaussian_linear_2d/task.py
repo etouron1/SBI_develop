@@ -152,6 +152,7 @@ class GaussianLinear2D(Task):
     
     def get_reference_posterior_samples(self, num_observation: int) -> torch.Tensor:
         """Get reference posterior samples for a given observation number"""
+        #directly read the csv file not the csv file .bz2
         path = (
             self.path
             / "files"
