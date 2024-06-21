@@ -293,6 +293,7 @@ class PosteriorEstimator(NeuralInference, ABC):
         # SNPE, we only use the latest data that was passed, i.e. the one from the
         # last proposal.
         proposal = self._proposal_roundwise[-1]
+        #train set growing or not
         train_loader, val_loader = self.get_dataloaders(
             start_idx,
             #self._round,
