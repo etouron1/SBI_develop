@@ -113,6 +113,7 @@ def run(
         training_kwargs = {}
     elif variant=="D":
         print("SNPE-D")
+        #add regularisation in the method
         inference_method = inference.SNPE_D(observation=observation, regularisation=regularisation, prior=prior, density_estimator=neural_net)
         training_kwargs = {}
         variant = "D_reg_" + str(regularisation)
